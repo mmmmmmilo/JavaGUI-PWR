@@ -45,11 +45,11 @@ javac L4/src/*.java -d L4/bin
 java -cp L4/bin Charts
 ```
 
-### Showcase / Gallery
+### Showcase
 <div align="center">
-  <img src="assets/l4_main.png" width="48%" />
-  <img src="assets/l4_dialog.png" width="48%" />
+  <img width="80%" alt="chart" src="https://github.com/user-attachments/assets/1f2463c5-565d-42e9-8f92-aa350da2c380" />
 </div>
+
 
 ---
 
@@ -91,11 +91,12 @@ javac L5/src/*.java -d L5/bin
 java -cp L5/bin ImageCroppingTool
 ```
 
-### Showcase / Gallery
+### Showcase
 <div align="center">
-  <img src="assets/l5_main.png" width="48%" />
-  <img src="assets/l5_selection.png" width="48%" />
+  <img width="40%" alt="edit_lines" src="https://github.com/user-attachments/assets/5649f227-cddf-4c5c-b135-56da2e06fcd3" />
+  <img width="40%" alt="edit_rectangle" src="https://github.com/user-attachments/assets/47d38e12-6006-4672-b6bb-865a6a138773" />
 </div>
+
 
 ---
 
@@ -130,8 +131,9 @@ javac L6/src/*.java -d L6/bin
 java -cp L6/bin TrafficIntersection
 ```
 
-### Showcase / Gallery
+### Showcase
 <div align="center">
-  <img src="assets/l6_overview.png" width="48%" />
-  <img src="assets/l6_night_traffic.png" width="48%" />
+  <img width="80%" alt="traffic_simulation" src="https://github.com/user-attachments/assets/83d2d0c5-198e-4ad6-96a8-2f3281bbd5c7" />
 </div>
+
+
