@@ -1,8 +1,6 @@
-# Academic Programming Projects Repository
+# Java GUI Applications: University Projects Suite
 
 A collection of university-level Java applications developed for the **Programming Languages** course. Each sub-project explores core concepts of the Java programming language, ranging from graphical user interfaces (Swing/AWT) to graphics processing, and multi-threaded, real-time concurrent simulation systems.
-
----
 
 ## Repository Overview
 
@@ -23,7 +21,7 @@ The **Function Chart Generator** is an interactive Swing desktop application tha
 
 A core highlight is the robust real-time user-input verification: the application continuously parses domain inputs (`xmin`, `xmax`, sample size `k`) and highlights fields in red to prevent division-by-zero, empty graphs, or invalid bounds, keeping the interface bulletproof and crash-resistant.
 
-### Key Features
+### Highlights & Implementation Details
 * **Multi-Function Support**: Linear ($y = ax + b$), Quadratic ($y = ax^2 + bx + c$), and Trigonometric Sine ($y = a \sin(x - b\pi) + c$) equations.
 * **Dynamic Chart Rendering**: Automatically computes coordinate transformations, drawing X/Y axes and plotting smooth multi-colored curves.
 * **CRUD Management**: Easily Add, Edit, or Delete functions through an interactive side panel list and configuration dialogs.
@@ -34,22 +32,10 @@ A core highlight is the robust real-time user-input verification: the applicatio
 * **GUI Framework**: Swing (components, layout managers, interactive models, dialog windows)
 * **Graphics API**: AWT (`java.awt.Graphics` Custom Drawing)
 
-### Compilation & Run Instructions
-Navigate to the repository root directory and run:
-
-```bash
-# Compile all source files into a bin directory
-javac L4/src/*.java -d L4/bin
-
-# Run the application
-java -cp L4/bin Charts
-```
-
 ### Showcase
 <div align="center">
   <img width="80%" alt="chart" src="https://github.com/user-attachments/assets/1f2463c5-565d-42e9-8f92-aa350da2c380" />
 </div>
-
 
 ---
 
@@ -60,19 +46,13 @@ The **Image Cropping Tool** is a desktop utility tailored for lossless, pixel-pe
 
 The tool implements custom calculations to bridge the gap between user mouse interactions on the scaled UI viewport and the actual coordinates of the original, high-resolution source image, preserving exact visual boundaries.
 
-### Key Features
+### Highlights & Implementation Details
 * **Two Selection Techniques**:
   * *Rectangle Selection*: Drag-and-drop bounding box selection (rendered in green).
   * *Lines Selection*: Moveable horizontal and vertical guidelines (rendered in blue dashed lines) for precise cropping boundaries.
 * **Pixel and Color Inspector**: Displays current mouse coordinates and the hexadecimal RGB value (`#RRGGBB`) of the pixel under the cursor in real-time.
 * **Lossless Cropping**: Automatically transforms GUI-scaled dimensions back to original file resolution, extracting exact subimages.
-* **Shortcut Bindings**: Complete keyboard-driven workflow for maximum productivity:
-  * `W` - Load PNG Image
-  * `Z` - Save Cropped Image
-  * `K` - Switch to Rectangle Mode
-  * `L` - Switch to Lines Mode
-  * `C` - Clear Selection & Reset Mode
-  * `Q` - Quit Application
+* **Shortcut Bindings**: Complete keyboard-driven workflow for maximum productivity (`W` - Load, `Z` - Save, `K`/`L` - Switch modes, `C` - Clear, `Q` - Quit).
 * **Contextual Access**: Identical actions are accessible via a right-click pop-up menu.
 
 ### Technologies Used
@@ -80,23 +60,11 @@ The tool implements custom calculations to bridge the gap between user mouse int
 * **GUI**: Java Swing & AWT (`JFileChooser`, `JPopupMenu`, Event Listeners)
 * **Image Processing**: standard `javax.imageio.ImageIO`, `java.awt.image.BufferedImage`, `java.awt.geom`
 
-### Compilation & Run Instructions
-Navigate to the repository root directory and run:
-
-```bash
-# Compile all source files into a bin directory
-javac L5/src/*.java -d L5/bin
-
-# Run the application
-java -cp L5/bin ImageCroppingTool
-```
-
 ### Showcase
 <div align="center">
   <img width="40%" alt="edit_lines" src="https://github.com/user-attachments/assets/5649f227-cddf-4c5c-b135-56da2e06fcd3" />
   <img width="40%" alt="edit_rectangle" src="https://github.com/user-attachments/assets/47d38e12-6006-4672-b6bb-865a6a138773" />
 </div>
-
 
 ---
 
@@ -107,7 +75,7 @@ The **Traffic Intersection Simulation** is a highly concurrent graphical simulat
 
 The cars dynamically adapt their velocities, handle lanes, execute turns, and perform active collision avoidance based on leading vehicles and multi-phase traffic lights. Safe memory sharing is implemented using modern concurrent collections.
 
-### Key Features
+### Highlights & Implementation Details
 * **Multi-Threaded Agent Model**: Every spawned vehicle is an isolated thread managing its own lifecycle, physics calculations, and movement loops.
 * **Automated Traffic Light Controller**: A central controller thread manages horizontal and vertical light configurations, switching states every 5 seconds.
 * **Real-time Collision Avoidance**: Vehicles detect preceding cars in their lane and direction, matching their speed or coming to a complete stop to maintain a safe distance.
@@ -120,20 +88,52 @@ The cars dynamically adapt their velocities, handle lanes, execute turns, and pe
 * **Concurrency Primitives**: Java Threads, `Runnable`, Swing `Timer`, `CopyOnWriteArrayList`, Thread synchronization/sleeping.
 * **GUI / Render engine**: Swing, AWT standard custom shapes (`paintComponent`).
 
-### Compilation & Run Instructions
-Navigate to the repository root directory and run:
-
-```bash
-# Compile all source files into a bin directory
-javac L6/src/*.java -d L6/bin
-
-# Run the application
-java -cp L6/bin TrafficIntersection
-```
-
 ### Showcase
 <div align="center">
   <img width="80%" alt="traffic_simulation" src="https://github.com/user-attachments/assets/83d2d0c5-198e-4ad6-96a8-2f3281bbd5c7" />
 </div>
 
+---
 
+## Compilation & Execution Instructions
+
+### Prerequisites
+Ensure the following tools are installed and accessible in your system's `PATH`:
+* **Java Development Kit (JDK):** Version 17 or newer.
+
+### Linux
+Navigate to the root directory of the repository. Compile and run the projects using the following commands:
+
+```bash
+# Project 1: Function Chart Generator (L4)
+javac L4/src/*.java -d L4/bin
+java -cp L4/bin Charts
+
+# Project 2: Image Cropping Tool (L5)
+javac L5/src/*.java -d L5/bin
+java -cp L5/bin ImageCroppingTool
+
+# Project 3: Traffic Intersection Simulation (L6)
+javac L6/src/*.java -d L6/bin
+java -cp L6/bin TrafficIntersection
+
+```
+
+### Windows
+
+Navigate to the root directory of the repository. Compile and run the projects using the following commands:
+
+```cmd
+:: Project 1: Function Chart Generator (L4)
+javac L4\src\*.java -d L4\bin
+java -cp L4\bin Charts
+
+:: Project 2: Image Cropping Tool (L5)
+javac L5\src\*.java -d L5\bin
+java -cp L5\bin ImageCroppingTool
+
+:: Project 3: Traffic Intersection Simulation (L6)
+javac L6\src\*.java -d L6\bin
+java -cp L6\bin TrafficIntersection
+
+```
