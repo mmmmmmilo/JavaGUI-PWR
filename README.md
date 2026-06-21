@@ -1,4 +1,4 @@
-# Java GUI Applications: University Projects Suite
+# Java GUI Applications: University Projects
 
 A collection of university-level Java applications developed for the **Programming Languages** course. Each sub-project explores core concepts of the Java programming language, ranging from graphical user interfaces (Swing/AWT) to graphics processing, and multi-threaded, real-time concurrent simulation systems.
 
